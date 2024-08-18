@@ -1,3 +1,6 @@
+# Fork
+This has an option for showing percentage instead of max health for my personal use. Everything bellow is from the original author, props to that guy.
+
 # **Stat Bubbles for D&D** Owlbear Rodeo Extension
 
 Track hit points and armor class using this [Owlbear Rodeo](https://www.owlbear.rodeo/) extension.
