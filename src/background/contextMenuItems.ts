@@ -15,7 +15,7 @@ export default async function createContextMenuItems(
   let menuHeight = STATS_HEIGHT + BOTTOM_PADDING;
   if (settings.nameTags) menuHeight += NAME_HEIGHT;
 
-  createPlayerMenu(themeMode, menuHeight);
+  createPlayerMenu(themeMode, menuHeight + HIDE_HEIGHT);
   createGmMenu(themeMode, menuHeight + HIDE_HEIGHT);
   // createDamageToolContextItem(themeMode);
 }
@@ -39,7 +39,6 @@ function createPlayerMenu(
               key: [
                 "metadata",
                 "com.owlbear-rodeo-bubbles-extension/metadata",
-                "hide",
               ],
               value: true,
               operator: "!=",

@@ -245,7 +245,7 @@ function AccessButton({
           </Button>
         </TooltipTrigger>
         <TooltipContent side="right">
-          {token.hideStats ? "Dungeon Master Only" : "Player Editable"}
+          {token.hideStats ? "Show Health" : "Hide Health"}
         </TooltipContent>
       </Tooltip>
     </TableCell>

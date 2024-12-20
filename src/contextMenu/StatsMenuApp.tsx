@@ -201,7 +201,7 @@ export default function StatsMenuApp({
     </div>
   );
 
-  const HideButton: JSX.Element = (
+  const HideHealthButton: JSX.Element = (
     <div>
       <Button
         variant={"ghost"}
@@ -213,12 +213,12 @@ export default function StatsMenuApp({
         {token.hideStats && true ? (
           <div className="inline-flex items-center gap-2 text-primary-800 hover:text-primary-800 dark:text-primary-dark-300 dark:hover:text-primary-dark-300">
             <BookLock />
-            <div>Dungeon Master Only</div>
+            <div>Show Health</div>
           </div>
         ) : (
           <div className="inline-flex items-center gap-2">
             <BookOpen />
-            <div>Player Editable</div>
+            <div>Hide Health</div>
           </div>
         )}
       </Button>
@@ -229,7 +229,7 @@ export default function StatsMenuApp({
     <div className="h-full space-y-2 overflow-hidden px-2 py-1">
       {nameTagsEnabled && NameField}
       {StatsMenu}
-      {role === "GM" && HideButton}
+      {HideHealthButton}
     </div>
   );
 }
