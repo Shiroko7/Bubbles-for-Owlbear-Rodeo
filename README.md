@@ -1,3 +1,7 @@
+# Fork
+This replaces the GM only health bars to let players decide if they want to show their HP (I trust them they wouldn't peek monsters or rather I think it's fine if they want to check for fairness). Everything bellow is from the original author, props to that guy.
+The setting for showing health bars doesn't work because it's always set true but I keep it because I'm lazy, the segmented health bar feature is neat though.
+
 # **Stat Bubbles for D&D** Owlbear Rodeo Extension
 
 Track hit points and armor class using this [Owlbear Rodeo](https://www.owlbear.rodeo/) extension.

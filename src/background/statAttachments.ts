@@ -234,13 +234,10 @@ function createAttachments(item: Image, role: "PLAYER" | "GM", dpi: number) {
   // Create stats
   const [health, maxHealth, tempHealth, armorClass, statsVisible] =
     getTokenStats(item);
-  if (role === "PLAYER" && !statsVisible && !settings.showBars) {
-    // Display nothing, explicitly remove all attachments
-    addHealthAttachmentsToArray(deleteItemsArray, item.id);
-    addArmorAttachmentsToArray(deleteItemsArray, item.id);
-    addTempHealthAttachmentsToArray(deleteItemsArray, item.id);
-  } else if (role === "PLAYER" && !statsVisible && settings.showBars) {
+  if (!statsVisible) {
     // Display limited stats depending on GM configuration
+    const hasArmorClassBubble = createArmorClass(true);
+    createTempHealth(true, hasArmorClassBubble);
     createLimitedHealthBar();
   } else {
     // Display full stats
@@ -258,11 +255,10 @@ function createAttachments(item: Image, role: "PLAYER" | "GM", dpi: number) {
     };
     if (settings.barAtTop) {
       if (
-        maxHealth <= 0 ||
-        (role === "PLAYER" && !statsVisible && !settings.showBars)
+        maxHealth <= 0
       ) {
         nameTagPosition.y = origin.y - 4;
-      } else if (role === "PLAYER" && !statsVisible && settings.showBars) {
+      } else if (!statsVisible) {
         nameTagPosition.y = origin.y - SHORT_BAR_HEIGHT - 4;
       } else {
         nameTagPosition.y = origin.y - FULL_BAR_HEIGHT - 4;
